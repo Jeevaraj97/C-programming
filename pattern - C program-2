@@ -1,0 +1,49 @@
+/*
+Enter the size of pattern:5
+    * 
+   * * 
+  * * * 
+ * * * * 
+* * * * * 
+ * * * * 
+  * * * 
+   * * 
+    * 
+  */
+  
+#include <stdio.h>
+
+int main()
+{   int n,I;
+printf("Enter the size of pattern:");
+scanf("%d",&n);
+
+for(int i=-n;i<=n;i++){
+    if(i<0){
+    I = -i;
+    for(int k=I-1;k>0;k--){
+        printf(" ");
+    }
+    for(int j=I;j<=n;j++){
+        printf("* ");
+    }
+    printf("\n");
+}
+    else{
+    if(i>=1){
+    I = i;  
+    for(int k=n-I;k<n;k++){
+        printf(" ");
+    }
+    for(int j=I;j<n;j++){
+        printf("* ");
+    }
+    printf("\n");
+    
+    }
+  }
+
+}
+    return 0;
+}
+
