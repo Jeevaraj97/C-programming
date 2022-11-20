@@ -1,0 +1,29 @@
+
+// print the equalent binary value of given double value using char pointer and integer pointer
+
+#include <stdio.h>
+
+int main()
+{
+    double num;
+    printf("Enter the number(real number) :");
+    scanf("%lf",&num);
+//    char *c = &num;
+    int *ip = &num;
+    printf("\nEqualent binary of given number %lf : ",num);
+    for(int i=1;i>=0;i--){
+        for(int j=sizeof(int)*8-1;j>=0;j--){
+            //printf("%d",*(c+i)>>j&1);
+            printf("%d",*(ip+i)>>j&1);
+        }
+        printf(" ");
+    }
+    
+    
+    return 0;
+} 
+
+Output:
+Enter the number(real number) :7.5
+
+Equalent binary of given number 7.500000 : 01000000000111100000000000000000 00000000000000000000000000000000 
