@@ -1,0 +1,20 @@
+//find the given machine is working little endian or big endian concept
+
+#include <stdio.h>
+
+int main()
+{
+  int x=1;
+  char *cp;
+  cp = &x;
+
+if(*cp == 1 ) 
+  printf("yes...the given machine is working in little endian concept\n");
+else
+  printf("No...the given machine is working in big endian concept\n");
+
+    return 0;
+}
+//--------------------------------------------------------------------------------
+Output : 
+yes...the given machine is working in little endian concept
